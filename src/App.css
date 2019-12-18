@@ -12,20 +12,14 @@
 	/*grid-gap: 10px;*/
 }
 
+.app-wrapper-content {
+	
+		grid-area: c;
+		background-color: rgb(127, 118, 165);
+	}
+	
+	
 
-.header{
-	grid-area: h;
-	background-color:  green;
-}
-.header img {
-	width: 20px;
-}
-.nav{
-	grid-area: n;
-	background-color: honeydew;
-}
 
-.content{
-	grid-area: c;
-	background-color: yellowgreen;
-}
+
+
