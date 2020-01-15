@@ -9,15 +9,22 @@ const Sidebar = (props) => {
         <div className={s.item}>
             <NavLink to="/Friends" activeClassName={s.activeLink}><h2>Friends</h2></NavLink>
         </div>
-        <div className={s.item}>
-            <img src='https://avatars.mds.yandex.net/get-pdb/988157/3bf8f275-54de-4e09-a9d8-f82f23a1f6db/s1200'/>
-        </div>
+
         <div>
-            <NavLink to={"/dialogs/" + props.id}>{props.name}</NavLink>
+            <Friend/>
+            <Friend/>
         </div>
     </nav>
 }
 
+const Friend = () => {
+    return(
+        <div className={s.item}>
+            <img src='https://avatars.mds.yandex.net/get-pdb/988157/3bf8f275-54de-4e09-a9d8-f82f23a1f6db/s1200'/>
+            sar
+        </div>
+    )
+}
 
 
 
