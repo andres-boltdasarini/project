@@ -38,7 +38,7 @@ const Sidef = (props) => {
     ]*/
 
 
-    console.log(props);
+
 
     let SidefElements = props.dialogs.map(d => <SidefItem name={d.name} id={d.id}/>)
 
