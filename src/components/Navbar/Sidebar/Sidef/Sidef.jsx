@@ -3,6 +3,7 @@ import s from "../../../Dialogs/Dialogs.module.css";
 import React from "react";
 import {NavLink} from "react-router-dom";
 
+
 const Heade = (props) => {
 
 
@@ -37,6 +38,7 @@ const Sidef = (props) => {
     ]*/
 
 
+    console.log(props);
 
     let SidefElements = props.dialogs.map(d => <SidefItem name={d.name} id={d.id}/>)
 

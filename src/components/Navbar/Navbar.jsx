@@ -13,6 +13,7 @@ const Navbar = (props) => {
     {id: 6, name: 'jeka'},
     {id: 7, name: 'semeeen'},
   ]*/
+
   return <nav className={s.nav}>
     <div className={s.item}>
       <NavLink to="/profile" activeClassName={s.activeLink}>Profile</NavLink>
@@ -30,7 +31,8 @@ const Navbar = (props) => {
       <NavLink to="/settings"activeClassName={s.activeLink}>Settings</NavLink>
     </div>
 <div>
-  <Sidebar dialogs={props.dialogs}/>
+
+  <Sidebar dialogs={props.state.dialogs}/>
 
 </div>
   </nav>

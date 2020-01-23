@@ -15,6 +15,7 @@ const Sidebar = (props) => {
         {id: 6, name: 'jeka'},
         {id: 7, name: 'semeeen'},
     ]*/
+
     return (
     <nav className={s.nav}>
         <div className={s.item}>
