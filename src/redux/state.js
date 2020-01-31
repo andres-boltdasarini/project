@@ -47,4 +47,14 @@ export let updateNewPostText = (newText) => {
     rerenderEntireTree(state)
 }
 
+ export let adD = (postMessage) =>{
+   let newPost = {
+       id:5,
+       text:postMessage,
+       likeCount:0
+   }
+    state.profilePage.posts.push(newPost)
+
+}
+
 export default state;
