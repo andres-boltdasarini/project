@@ -3,15 +3,18 @@ import React from 'react';
 
 export const Dialogtext = (props) => {
     let newmessageElement = React.createRef();
+
     let sendMessage = () => {
+        props.sendMessage()}
+
+    let onMessageChange = () => {
         let text = newmessageElement.current.value
-        alert(text)
+        props.updateNewTextMessage(text);
     }
 
     return (
         <div>
-            <textarea ref={newmessageElement}> </textarea>
+            <textarea onChange={onMessageChange} ref={newmessageElement} value={props.newMessageText}/>
             <button onClick={sendMessage}>send message</button>
         </div>)
 }
-

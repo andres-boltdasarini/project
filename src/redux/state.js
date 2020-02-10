@@ -25,7 +25,8 @@ let state = {
             {id: 3, text: 'tr'},
             {id: 4, text: 'try'},
             {id: 5, text: 'try'},
-        ]
+        ],
+        newMessageText: 'qqq'
     }
 }
 
@@ -44,6 +45,20 @@ export let addPost = (postMessage) => {
 export let updateNewPostText = (newText) => {
 
     state.profilePage.newPostText = newText
+    rerenderEntireTree(state)
+}
+
+export let sendMessage = () => {
+    let newMessage = {
+        id:2,
+        text:state.dialogsPage.newMessageText
+    }
+    state.dialogsPage.messages.push(newMessage)
+    state.dialogsPage.newMessageText = ''
+    rerenderEntireTree(state)
+}
+export  let updateNewTextMessage = (newMess) => {
+    state.dialogsPage.newMessageText = newMess
     rerenderEntireTree(state)
 }
 
