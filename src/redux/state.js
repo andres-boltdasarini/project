@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () => {
+    console.log ('State change')
+}
 
 let state = {
     profilePage: {
