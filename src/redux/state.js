@@ -50,6 +50,10 @@ export let updateNewPostText = (newText) => {
     rerenderEntireTree(state)
 }
 
+export const subscribe  = (observer) => {
+    rerenderEntireTree = observer //observer publisher-sunscriber панерн addeventlistener
+}
+
 export let sendMessage = () => {
     let newMessage = {
         id:2,
