@@ -35,8 +35,8 @@ let store = {
     _callSubscriber ()  {
         console.log ('State change')
     },
-    addPost  ()  {
-        debugger
+    /*addPost  ()  {
+
         let newPost = {
             id: 2,
             text: this._state.profilePage.newPostText,
@@ -45,7 +45,7 @@ let store = {
         this._state.profilePage.posts.push(newPost)
         this._state.profilePage.newPostText = ''
         this._callSubscriber(this._state)
-    },
+    },*/
     updateNewPostText  (newText)  {
 
         this._state.profilePage.newPostText = newText
@@ -66,7 +66,37 @@ let store = {
     updateNewTextMessage  (newMess)  {
         this._state.dialogsPage.newMessageText = newMess
         this._callSubscriber(this._state)
-    }
+    },
+    dispatch (action) {
+
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 2,
+                text: this._state.profilePage.newPostText,
+                likeCount: 0
+            }
+            this._state.profilePage.posts.push(newPost)
+            this._state.profilePage.newPostText = ''
+            this._callSubscriber(this._state) }
+            else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText
+            this._callSubscriber(this._state)
+            }
+            else if (action.type === 'SEND-MESSAGE') {
+            let newMessage = {
+                id:2,
+                text:this._state.dialogsPage.newMessageText
+            }
+            this._state.dialogsPage.messages.push(newMessage)
+            this._state.dialogsPage.newMessageText = ''
+            this._callSubscriber(this._state)
+        }
+            else if (action.type === 'UPDATE-NEW-TEXT-MESSAGE') {
+            this._state.dialogsPage.newMessageText = action.newMess
+            this._callSubscriber(this._state)
+        }
+        }
+
 }
 
 
