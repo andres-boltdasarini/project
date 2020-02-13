@@ -1,16 +1,18 @@
 import React from 'react';
 import MyPosts from "../../Profile/MyPosts/MyPosts";
+import {addPostActionCreator, sendMessageActionCreator, updateNewTextMessageActionCreator} from "../../../redux/state";
+
 
 
 export const Dialogtext = (props) => {
     let newmessageElement = React.createRef()
 
     let sendMessage = () => {
-        props.dispatch({type: 'SEND-MESSAGE'})
+        props.dispatch(sendMessageActionCreator())
     }
     let onMessageChange = () => {
         let text = newmessageElement.current.value
-        let action = {type: 'UPDATE-NEW-TEXT-MESSAGE', newMess: text};
+        let action = updateNewTextMessageActionCreator(text)
         props.dispatch(action)
     }
 
