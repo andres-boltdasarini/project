@@ -1,6 +1,6 @@
 import React from 'react';
-import MyPosts from "../../Profile/MyPosts/MyPosts";
-import {addPostActionCreator, sendMessageActionCreator, updateNewTextMessageActionCreator} from "../../../redux/state";
+import {sendMessageActionCreator, updateNewTextMessageActionCreator} from "../../../redux/dialog-reducer";
+
 
 
 
