@@ -1,7 +1,27 @@
 const SEND_MESSAGE = 'SEND-MESSAGE'
 const UPDATE_NEW_TEXT_MESSAGE = 'UPDATE-NEW-TEXT-MESSAGE'
 
-const dialogReducer = (state, action) => {
+let initialState = {
+    dialogs: [
+        {id: 1, name: 'Dima'},
+        {id: 2, name: 'Andrey'},
+        {id: 3, name: 'Kolya'},
+        {id: 4, name: 'Ilya'},
+        {id: 5, name: 'Sanya'},
+        {id: 6, name: 'Jeka'},
+        {id: 7, name: 'Semen'},
+    ],
+    messages: [
+        {id: 1, text: 'try'},
+        {id: 2, text: 't'},
+        {id: 3, text: 'tr'},
+        {id: 4, text: 'try'},
+        {id: 5, text: 'try'},
+    ],
+    newMessageText: 'qqq'
+}
+
+const dialogReducer = (state = initialState, action) => {
 
      if (action.type === 'SEND-MESSAGE') {
         let newMessage = {
