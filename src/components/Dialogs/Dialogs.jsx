@@ -6,7 +6,6 @@ import {Dialogtext} from "./Dialogtext/Dialogtext";
 import MyPosts from "../Profile/MyPosts/MyPosts";
 
 const Dialogs = (props) => {
-
     let dialogElements =
         props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>)
     let messagesElements =

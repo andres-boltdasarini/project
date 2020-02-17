@@ -8,7 +8,6 @@ import {BrowserRouter} from "react-router-dom";
 
 
 let rerenderEntireTree = (state) => {
-
     ReactDOM.render(
         <BrowserRouter>
             <App
