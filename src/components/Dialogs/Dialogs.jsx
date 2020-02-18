@@ -3,7 +3,7 @@ import s from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {Dialogtext} from "./Dialogtext/Dialogtext";
-import MyPosts from "../Profile/MyPosts/MyPosts";
+
 
 const Dialogs = (props) => {
     let dialogElements =
