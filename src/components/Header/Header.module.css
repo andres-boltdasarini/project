@@ -4,10 +4,16 @@
 }
 .header img {
 	width: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
 }
 .loginBlock {
 	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	color:white;
 }
 .loginBlock a {
-	color:white;
+	color:red;
+
 }
