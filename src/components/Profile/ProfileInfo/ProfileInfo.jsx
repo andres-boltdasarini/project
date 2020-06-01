@@ -10,10 +10,10 @@ const ProfileInfo = (props) => {
     }
     return (
         <div>
-            {/*<div>
+            <div className={s.profileAva}>
                 <img
-                    src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350'/>
-            </div>*/}
+                    src='https://i10.fotocdn.net/s120/a01b743b2f32374d/user_l/2752884094.jpg'/>
+            </div>
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large} />
                 <div>{props.profile.lookingForAJobDescription}</div>

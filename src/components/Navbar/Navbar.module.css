@@ -2,6 +2,7 @@
 	grid-area: n;
 	background-color: rgb(214, 229, 247);
 	padding: 20px;
+	font-family: sans-serif;
 }
 
 .item a{
