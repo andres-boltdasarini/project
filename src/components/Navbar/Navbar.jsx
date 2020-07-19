@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Navbar.module.css'
 import {NavLink} from "react-router-dom";
-import Sidebar from "./Sidebar/Sidebar";
+
 
 const Navbar = (props) => {
     return <nav className={s.nav}>
